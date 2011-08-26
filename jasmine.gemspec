@@ -49,8 +49,11 @@ Gem::Specification.new do |s|
     s.add_development_dependency 'rack', '>= 1.2.1'
   end
 
+  if ENV["ADD_RELEASE_RAKE_TASKS"] 
+    s.add_development_dependency 'gem-release'
+  end
+
   s.add_development_dependency 'rack-test'
-  s.add_development_dependency 'gem-release', ">= 0.0.16"
   s.add_development_dependency 'ci_reporter'
   s.add_development_dependency 'json_pure'
 
